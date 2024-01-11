@@ -8,32 +8,31 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;   
 
 @Entity
-@Table(name = "Recipie")
-public class Recipie {
+@Table(name = "Book")
+public class Book {
 
     /* object attributes */
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(name = "name")
-    private String name;
+    @Column(name = "title")
+    private String title;
 
-    @Column(name = "chef")
+    @Column(name = "author")
     private String author;
 
-    @Column(name = "cusine")
+    @Column(name = "genre")
     private String genre;
 
-    @Column(name = "time")
-    private double time;
+    @Column(name = "price")
+    private double price;
 
     /* default constructor */
     public Book(){
     }
 
-    public Book(Long id, String name, String , String genre, double price) {
-        this.id = id;
+    public Book(String title, String author, String genre, double price) {
         this.title = title;
         this.author = author;
         this.genre = genre;
